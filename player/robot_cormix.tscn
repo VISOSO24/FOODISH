@@ -1,0 +1,51 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://player/mov_cormixrobot/robotV7.png" type="Texture" id=1]
+[ext_resource path="res://player/mov_cormixrobot/robotV8.png" type="Texture" id=2]
+[ext_resource path="res://player/mov_cormixrobot/robotV5.png" type="Texture" id=3]
+[ext_resource path="res://player/mov_cormixrobot/robotV6.png" type="Texture" id=4]
+[ext_resource path="res://player/mov_cormixrobot/robotV10.png" type="Texture" id=5]
+[ext_resource path="res://player/mov_cormixrobot/robotV9.png" type="Texture" id=6]
+[ext_resource path="res://player/mov_cormixrobot/robotV2.png" type="Texture" id=7]
+[ext_resource path="res://player/mov_cormixrobot/robotV3.png" type="Texture" id=8]
+[ext_resource path="res://player/mov_cormixrobot/robotV4.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.5
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.3932, 21.1226 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.57816, 15.65 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.24446, 14.3152 )
+
+[node name="robot_cormix" type="KinematicBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="aspr_robot" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.669949, 0.6425 )
+frames = SubResource( 1 )
+frame = 8
+playing = true
+
+[node name="col_robot" type="CollisionShape2D" parent="."]
+position = Vector2( 0.224503, 15.4838 )
+shape = SubResource( 2 )
+
+[node name="col_robot_izqu" type="CollisionShape2D" parent="."]
+position = Vector2( -54.7284, 22.0241 )
+shape = SubResource( 3 )
+
+[node name="col_robot_dere" type="CollisionShape2D" parent="."]
+position = Vector2( 53.3936, 20.3563 )
+shape = SubResource( 4 )

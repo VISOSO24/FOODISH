@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://environment/comida/saludable/carne.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.0148
+height = 21.0433
+
+[node name="carne" type="RigidBody2D"]
+position = Vector2( 16, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spr_carne" type="Sprite" parent="."]
+position = Vector2( -21.12, 22.48 )
+scale = Vector2( 0.11, 0.0861905 )
+texture = ExtResource( 1 )
+
+[node name="col_carne" type="CollisionShape2D" parent="."]
+position = Vector2( -20, 23 )
+rotation = 1.39626
+shape = SubResource( 1 )
